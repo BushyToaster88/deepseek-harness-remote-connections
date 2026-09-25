@@ -272,6 +272,7 @@
     { "path": "./packages/typert/registry" },
     { "path": "./packages/api/gateway/tsconfig.host.json" },
     { "path": "./packages/api/remotes/tsconfig.host.json" },
+    { "path": "./packages/api/remote-servers" },
     { "path": "./packages/api/job-controller/tsconfig.host.json" },
     { "path": "./packages/api/session-controller/tsconfig.host.json" },
     { "path": "./packages/api/workspace-files/tsconfig.host.json" },

@@ -1,0 +1,231 @@
+/* The headless surface owns the picker spacing instead of Modal's default chrome. */
+.dialog.dialog {
+  width: min(680px, 100%);
+  height: min(500px, calc(100dvh - 32px));
+  max-height: 100%;
+  padding: 0;
+  gap: 0;
+  --dsh-scrollbar-thumb: var(--dsw-alias-scrollbar-bg-l2);
+  --dsh-scrollbar-thumb-hover: var(--dsw-alias-scrollbar-hover-l2);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: none;
+  min-width: 0;
+  padding: 16px 14px 8px 24px;
+  border-bottom: 0.5px solid var(--dsw-alias-border-l3);
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  min-height: 28px;
+  margin: 0;
+  font: var(--dsw-font-base-strong-16);
+  color: var(--dsw-alias-label-primary);
+}
+
+.subtitle {
+  font: var(--dsw-font-xxs-12);
+  color: var(--dsw-alias-label-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crumbs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.crumbSeat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  min-width: 0;
+}
+
+.crumb.crumb {
+  display: block;
+  flex: none;
+  max-width: 240px;
+  height: 24px;
+  padding: 0 4px;
+  font: var(--dsw-font-xs-strong-13);
+  color: var(--dsw-alias-label-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.crumb:hover:not(:disabled) {
+  color: var(--dsw-alias-label-primary);
+}
+
+.crumbChevron,
+.rowChevron {
+  flex: none;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 16px 16px 24px;
+}
+
+.lead {
+  flex: none;
+  margin: 0;
+  font: var(--dsw-font-s-14);
+  color: var(--dsw-alias-label-primary);
+}
+
+.list,
+.connectionList {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  min-width: 0;
+  gap: 2px;
+  padding-right: 8px;
+}
+
+/* The primitive supplies button semantics; the picker supplies its compact row geometry. */
+.row.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  height: 28px;
+  flex: none;
+  padding: 4px 8px;
+  border: none;
+  border-radius: var(--dsw-radius-sm);
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: var(--dsw-font-xs-strong-13);
+  text-align: left;
+}
+
+.row:hover:not(:disabled) {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.row:disabled {
+  cursor: default;
+}
+
+.row:focus-visible,
+.crumb:focus-visible {
+  outline: var(--dsw-focus-ring-width) solid var(--dsw-focus-ring-color, var(--dsw-alias-state-business-primary));
+  outline-offset: -2px;
+}
+
+.rowIcon {
+  flex: none;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.rowName {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.connectionList {
+  gap: 8px;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 0.5px solid var(--dsw-alias-settings-card-stroke);
+  border-radius: var(--dsw-radius-xl);
+  background: var(--dsw-alias-settings-card-fill);
+}
+
+.connectionMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.connectionName {
+  font: var(--dsw-font-s-strong-14);
+  color: var(--dsw-alias-label-primary);
+  overflow-wrap: anywhere;
+}
+
+.connectionMeta {
+  font: var(--dsw-font-xxs-12);
+  color: var(--dsw-alias-label-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.connection > button {
+  flex: none;
+}
+
+.empty,
+.notice {
+  flex: none;
+  margin: 0;
+  padding: 4px 0;
+  font: var(--dsw-font-xxs-12);
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.notice {
+  color: var(--dsw-alias-state-warn-label);
+}
+
+.footerBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: none;
+  padding: 16px 24px;
+  border-top: 0.5px solid var(--dsw-alias-border-l3);
+}
+
+.footerGap {
+  flex: 1 1 0;
+}
+
+.footerAction {
+  min-width: 72px;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}

@@ -1,5 +1,11 @@
 # DeepSeek Harness
 
+> **Fork notice** — this is a fork of [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness).
+> It adds two packages for remote connections over SSH (`packages/client/ui-remote-workspaces`,
+> `packages/api/remote-servers`); the companion carrier, driver and registry live in
+> [deepseek-harness-remote-connections](https://github.com/BushyToaster88/deepseek-harness-remote-connections).
+> Everything below is the upstream project's own README, unchanged.
+
 English | [中文](README.zh.md)
 
 DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
