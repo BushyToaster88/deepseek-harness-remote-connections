@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+// ACP launches this executable; SDK clients launch the .mjs module with node.
+// Keep both entry points on one implementation so their transport cannot drift.
+import './dsh-remote-carrier.mjs'

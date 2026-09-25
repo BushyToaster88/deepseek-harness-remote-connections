@@ -1,0 +1,16 @@
+{
+  "name": "dsh-remote",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Use local and remote DSH workspaces in one GUI over SSH-carried ACP",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify:quick": "node verify.mjs --quick"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^1.5.0",
+    "@deepseek-ai/dsh-sdk-client": "0.1.7-alpha.2",
+    "@zed-industries/agent-client-protocol": "^0.4.5"
+  }
+}

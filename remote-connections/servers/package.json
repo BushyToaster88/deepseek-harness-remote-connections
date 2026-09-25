@@ -1,0 +1,8 @@
+{
+  "name": "dsh-remote-servers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SSH connections and remote workspace registry with stable local anchors",
+  "exports": { ".": "./index.js" }
+}

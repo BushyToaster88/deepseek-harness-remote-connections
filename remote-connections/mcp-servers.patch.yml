@@ -1,0 +1,33 @@
+# MCP servers — a TEMPLATE, not a real list.
+#
+# `config-sync` reads this file only when `$DSH_HOME/mcp-servers.patch.yml` does not exist, so
+# keep your own list there (outside any repository) and edit it freely. That is the file the
+# carrier ships to a host, inside a marked region of that host's global patch.
+#
+# Shape: one `dsh-mcp-client` row per server, inserted into the profile. Its tools reach the
+# model as `mcp__<serverName>__<tool>`. A server that is unreachable logs an error and
+# contributes no tools rather than blocking startup (`failOnStartupError` defaults to false).
+#
+# Two forms work:
+#   transport: streamable-http   an MCP endpoint over HTTP(S) — give it a `url`
+#   transport: stdio             a local command — give it `command` (and `args`, `env`)
+#
+# Never put a token in this file. Rows that need one carry an `Authorization` header with a
+# `@NAME@` placeholder instead; `config-sync --with-tokens` substitutes it from your own global
+# patch, and without that flag the header line is dropped so the row simply contributes nothing.
+- insert:
+    - id: mcp-example-http
+      name: "@deepseek-ai/dsh-mcp-client"
+      config:
+        serverName: example-http
+        transport: streamable-http
+        url: https://mcp.example.com/mcp
+        toolCallTimeoutMs: 90000
+
+    - id: mcp-example-stdio
+      name: "@deepseek-ai/dsh-mcp-client"
+      config:
+        serverName: example-stdio
+        transport: stdio
+        command: /usr/local/bin/example-mcp-server
+        args: ["--stdio"]

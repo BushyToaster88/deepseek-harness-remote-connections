@@ -1,0 +1,10 @@
+{
+  "name": "dsh-remote-acp-driver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Workspace-routed ACP agent driver for local and SSH-backed DSH sessions",
+  "exports": {
+    ".": "./index.js"
+  }
+}

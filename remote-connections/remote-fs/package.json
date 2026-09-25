@@ -1,0 +1,10 @@
+{
+  "name": "dsh-remote-fs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read decorator that serves the remote workspace through the composed ctx.fs",
+  "exports": {
+    ".": "./index.js"
+  }
+}

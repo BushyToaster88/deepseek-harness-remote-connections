@@ -1,9 +1,10 @@
 # DeepSeek Harness
 
-> **Fork notice** — this is a fork of [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness).
-> It adds two packages for remote connections over SSH (`packages/client/ui-remote-workspaces`,
-> `packages/api/remote-servers`); the companion carrier, driver and registry live in
-> [deepseek-harness-remote-connections](https://github.com/BushyToaster88/deepseek-harness-remote-connections).
+> **Fork notice** — this is a fork of [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
+> that adds remote connections over SSH: workspaces on other machines, driven from one GUI.
+> The DSH-side packages are `packages/client/ui-remote-workspaces` and `packages/api/remote-servers`;
+> the out-of-tree carrier, driver, registry, filesystem decorator and config sync live in
+> [`remote-connections/`](./remote-connections), which has its own README.
 > Everything below is the upstream project's own README, unchanged.
 
 English | [中文](README.zh.md)
